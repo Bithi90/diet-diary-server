@@ -48,18 +48,18 @@ async function run() {
             res.send(result);
         })
 
-        // app.get('/addFood',async (req, res) => {
-        //     const result = await addedFoodCollection.find().toArray();
-        //     res.send(result);
-        // })
-
-        app.get('/addFood', async (req, res) => {
-            const email = req.query.email;
-      
-            const query = { email: email };
-            const result = await addedFoodCollection.find(query).toArray();
+        app.get('/addFood',async (req, res) => {
+            const result = await addedFoodCollection.find().toArray();
             res.send(result);
-          });
+        })
+
+        // app.get('/addFood', async (req, res) => {
+        //     const email = req.query.email;
+      
+        //     const query = { email: email };
+        //     const result = await addedFoodCollection.find(query).toArray();
+        //     res.send(result);
+        //   });
       
 
         // Send a ping to confirm a successful connection
