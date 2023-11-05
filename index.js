@@ -51,7 +51,7 @@ async function run() {
         app.get('/addFood',async (req, res) => {
             const result = await addedFoodCollection.find().toArray();
             res.send(result);
-        })
+        }) 
 
         // app.get('/addFood', async (req, res) => {
         //     const email = req.query.email;
